@@ -5,13 +5,13 @@ public class AbilityObjectsThrower : MBWithAudio
 {
     [SerializeField] private GameObject _potionPrefab;
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             ThrowPotion();
         }
-    }
+    }*/
 
     private void ThrowPotion()
     {

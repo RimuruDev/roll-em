@@ -1851,14 +1851,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1843341825}
   - {fileID: 1482487172}
   - {fileID: 923094582}
-  - {fileID: 706787955}
+  - {fileID: 1338534611}
   - {fileID: 588283245}
   - {fileID: 744643798}
   - {fileID: 1038521710}
+  - {fileID: 706787955}
   - {fileID: 536257394}
+  - {fileID: 1843341825}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480947612
@@ -2341,8 +2342,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2068324113}
   - {fileID: 498698446}
+  - {fileID: 2068324113}
   - {fileID: 635080682}
   m_Father: {fileID: 187990644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4226,6 +4227,99 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: -1.4, y: 0}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!1 &1338534610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338534611}
+  - component: {fileID: 1338534612}
+  m_Layer: 0
+  m_Name: _SHORTCUTS_MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338534611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338534610}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.13624, y: 0.03515, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 369989767}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338534612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338534610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05123d6adfccda43ba7db5b8a251941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShortcutsManager
+  Shortcuts:
+  - _shortKey: 113
+    _keyEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6680047841158192774}
+          m_TargetAssemblyTypeName: HealButton, Assembly-CSharp
+          m_MethodName: HealRelatedObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _shortKey: 101
+    _keyEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1186664244}
+          m_TargetAssemblyTypeName: HealButton, Assembly-CSharp
+          m_MethodName: HealRelatedObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _shortKey: 119
+    _keyEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6050074553812696452}
+          m_TargetAssemblyTypeName: RechargeableAbilityButton, Assembly-CSharp
+          m_MethodName: UseAbility
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1415868131
 GameObject:
   m_ObjectHideFlags: 0
