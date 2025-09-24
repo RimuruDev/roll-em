@@ -49,12 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d723f86282d064785a6b6d45cd3826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoblinAI
-  _maxHP: 5
   SoundOneshots:
-  - {fileID: 8300000, guid: 25b574e35c62a7640959454781e5b921, type: 3}
-  - {fileID: 8300000, guid: 838c02ba90ecd5143ba3560439dbec5e, type: 3}
+  - {fileID: 8300000, guid: e80cf448ecf3c654a9185c8b9efffabc, type: 3}
+  - {fileID: 8300000, guid: 167f3f6c6ed5641419cdbf2ac2a929ac, type: 3}
   _minPitch: 0.9
   _maxPitch: 1.3
+  _maxHP: 5
   _targetType: 0
   _damage: 1
   _reward: 1

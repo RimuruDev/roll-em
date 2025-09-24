@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Damageable : MonoBehaviour, IDamageable
+public class Damageable : MBWithAudio, IDamageable
 {
     public float hp => _HP;
     public float maxHP => _maxHP;

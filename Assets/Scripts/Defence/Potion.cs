@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Potion : MonoBehaviour
+public class Potion : MBWithAudio
 {
     public Vector3 targetPoint
     {
@@ -32,6 +32,7 @@ public class Potion : MonoBehaviour
 
     private void OnDestroy()
     {
+        Links.soundManager.PlayOneshotClip(SoundOneshots[0], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch), true, transform.position);
         _movement.OnReachedTarget -= SpawnPotionZone;
     }
 }

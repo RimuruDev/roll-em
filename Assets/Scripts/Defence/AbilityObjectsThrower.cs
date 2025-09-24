@@ -1,20 +1,21 @@
 using System.Collections;
 using UnityEngine;
 
-public class AbilityObjectsThrower : MonoBehaviour
+public class AbilityObjectsThrower : MBWithAudio
 {
     [SerializeField] private GameObject _potionPrefab;
 
-    private void Update()
+    /*private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            //ThrowPotion();
+            ThrowPotion();
         }
-    }
+    }*/
 
     private void ThrowPotion()
     {
+        Links.soundManager.PlayOneshotClip(SoundOneshots[0], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch));
         Potion potion = Instantiate(_potionPrefab, transform.position, Quaternion.identity).GetComponent<Potion>();
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;

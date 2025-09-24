@@ -150,6 +150,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1038661431}
   - {fileID: 975354394}
   m_Father: {fileID: 213848853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -899,7 +900,6 @@ RectTransform:
   - {fileID: 1542189314}
   - {fileID: 523984144}
   - {fileID: 1933165370}
-  - {fileID: 1038661431}
   m_Father: {fileID: 213848853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1967,16 +1967,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826608258ec80e445a6691d9b72d0cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shield
-  _maxHP: 200
   SoundOneshots:
-  - {fileID: 8300000, guid: f27ae99c1db2879418c1f6b90b3b00c4, type: 3}
-  - {fileID: 8300000, guid: 1243326a68806fb4cbcabe19823cbe7d, type: 3}
-  - {fileID: 8300000, guid: 3831ad53ba9cdda44a8e722d0876638f, type: 3}
-  - {fileID: 8300000, guid: afceb20064b8c634cbb659aaaa018bfc, type: 3}
-  - {fileID: 8300000, guid: 535fc3bf931d5f147a39845d182c93a6, type: 3}
-  - {fileID: 8300000, guid: 96eda856818307c4fa53aad662f97a97, type: 3}
+  - {fileID: 8300000, guid: dece10f5944eeaa4097e11fc034a2ba4, type: 3}
+  - {fileID: 8300000, guid: 2bc624688a043e54683c47ec1b803218, type: 3}
+  - {fileID: 8300000, guid: ac3f011385375ad47b12117ca094536d, type: 3}
+  - {fileID: 8300000, guid: 3ceecfaeb9527da429f52126fa145416, type: 3}
+  - {fileID: 8300000, guid: f7e4d1ff8e980a44ab2a481073c14460, type: 3}
+  - {fileID: 8300000, guid: aa97d56b51b4fd140af843ef924c76b8, type: 3}
   _minPitch: 0.8
   _maxPitch: 1.2
+  _maxHP: 200
   _damageMultiplier: 1
 --- !u!60 &480947617
 PolygonCollider2D:
@@ -2868,6 +2868,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e91cfb27c900f42ac9c0bfec303a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectsThrower
+  SoundOneshots:
+  - {fileID: 8300000, guid: 178f5ea391466ff4ab48cebbdee5f329, type: 3}
+  _minPitch: 0.9
+  _maxPitch: 1.1
   _potionPrefab: {fileID: 5329969041607124455, guid: d2c1a8afa40dac84a9dcd4fc7e1e88a8, type: 3}
 --- !u!1 &744643797
 GameObject:
@@ -3102,7 +3106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyManager
   _maxGameSpeed: 1.6
-  _growthPerSec: 0.005
+  _growthPerSec: 0.003
 --- !u!1 &954391960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,13 +3466,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038661430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 173822061}
-  m_Father: {fileID: 187990644}
+  m_Father: {fileID: 7220489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4266,7 +4270,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 85cdc9d6be6031749851379e5f9ed06c, type: 3}
+  m_Resource: {fileID: 8300000, guid: a759a244c83330d41b70828e2fcb3826, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5324,7 +5328,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1482487171}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CancelPauseTime
+        m_MethodName: CancelPauseAndRestoreSavedTimescale
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5457,7 +5461,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1482487171}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ApplicationQuit
+        m_MethodName: PauseTimeAndSaveCurrentTimescale
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5465,7 +5469,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1038661430}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1559478722
 MonoBehaviour:
@@ -5965,7 +5981,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1482487171}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PauseTime
+        m_MethodName: PauseTimeAndSaveCurrentTimescale
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6121,11 +6137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e585ce434024541959582271e3d825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  _maxHP: 100
   SoundOneshots:
-  - {fileID: 8300000, guid: b0700fbbb0c51be46b2eed87062e11a3, type: 3}
+  - {fileID: 8300000, guid: dc0fa66d2aa01244aa6691daf4cc9380, type: 3}
   _minPitch: 0.8
   _maxPitch: 1.2
+  _maxHP: 100
 --- !u!60 &1733702015
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6496,7 +6512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1835151299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6598,6 +6614,7 @@ MonoBehaviour:
   - {fileID: -7313052658370404358, guid: 60de52780479a48479f891e57cc33a7a, type: 3}
   - {fileID: 1724056373321789302, guid: 60de52780479a48479f891e57cc33a7a, type: 3}
   - {fileID: -462206333, guid: 60de52780479a48479f891e57cc33a7a, type: 3}
+  - {fileID: -1192648229, guid: 60de52780479a48479f891e57cc33a7a, type: 3}
   Hints:
   - hold A and D keys to roll the log
   - "more speed \r\n= \r\nmore damage"
@@ -6606,6 +6623,9 @@ MonoBehaviour:
     use coins to repair
 
     tower or log'
+  - 'missed enemies?
+
+    throw the potion at their heads!'
   OnLearningEnded:
     m_PersistentCalls:
       m_Calls:

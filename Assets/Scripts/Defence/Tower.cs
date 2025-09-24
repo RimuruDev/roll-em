@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tower : DamageableWithAudio
+public class Tower : Damageable
 {
     private void Awake()
     {

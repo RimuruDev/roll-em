@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class EnemyAI : DamageableWithAudio
+public class EnemyAI : Damageable
 {
     public int damage { get => _damage; }
 

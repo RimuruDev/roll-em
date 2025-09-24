@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8155bc331aae6846b2ebc40e496bb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Potion
+  SoundOneshots:
+  - {fileID: 8300000, guid: 5b15d0f446979114c9b82a14a686be3c, type: 3}
+  _minPitch: 0.8
+  _maxPitch: 1.2
   _potionZonePrefab: {fileID: 6514867705821442322, guid: e14d0b83895040f42875e19a7cbff443, type: 3}
 --- !u!114 &3015075344603747981
 MonoBehaviour:

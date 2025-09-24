@@ -181,7 +181,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,6 +190,28 @@ TextureImporter:
       bones: []
       spriteID: e05b96b2a9b42f04f833d7f64111ad5b
       internalID: -462206333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c30629cad9d084988292610b5d8119
+      internalID: -1192648229
       vertices: []
       indices: 
       edges: []
@@ -211,6 +233,7 @@ TextureImporter:
       learning_0: -7313052658370404358
       learning_1: 1724056373321789302
       learning_2: -462206333
+      learning_3: -1192648229
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

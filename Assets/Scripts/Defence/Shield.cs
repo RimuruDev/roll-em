@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shield : DamageableWithAudio
+public class Shield : Damageable
 {
     [Header("Shield settings")]
     [SerializeField] private float _damageMultiplier = 1f;
