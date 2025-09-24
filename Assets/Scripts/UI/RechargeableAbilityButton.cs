@@ -1,39 +1,86 @@
-using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-public class RechargeableAbilityButton : AbilityButton
+public class RechargeableAbilityButton : MonoBehaviour
 {
     [SerializeField] private int _usageCost = 1;
-    [SerializeField] private float _rechargeTime = 10;
+    [SerializeField] private int _rechargeTime = 10;
 
-    protected Action OnAbilityUsed;
+    private Image _icon;
+    private Button _btn;
+
+    private bool _isCharged = false;
+    private Coroutine _showCostCoroutine;
+
+    public UnityEvent OnAbilityUsed;
+
 
     private void Awake()
     {
-        Initialize();
-        _currentCost = _usageCost;
-        StartCoroutine(OnRecharge());
+        _icon = GetComponent<Image>();
+        _btn = GetComponent<Button>();
+        Wallet.OnBalanceChanged += SetInteractableState;
     }
 
-    public void AbilityBtn_Click()
+    private void Start()
     {
-        if (PayAbility())
-        {
-            OnAbilityUsed?.Invoke();
-            StartCoroutine(OnRecharge());
-        }
+        _btn.interactable = false;
+        _icon.fillAmount = 0;
+        StartCoroutine(Recharge());
     }
 
-    private IEnumerator OnRecharge()
+    private IEnumerator Recharge()
     {
+        _isCharged = false;
+        _btn.interactable = false;
         _icon.fillAmount = 0;
         while (_icon.fillAmount < 1)
         {
-            _btn.interactable = false;
             _icon.fillAmount += Time.deltaTime / _rechargeTime;
             yield return null;
         }
-        _btn.interactable = true;
+        _isCharged = true;
+        SetInteractableState();
+    }
+
+    public void UseAbility()
+    {
+        if (Wallet.BringCoins(_usageCost))
+        {
+            OnAbilityUsed?.Invoke();
+            StartCoroutine(Recharge());
+        }
+    }
+
+    public void OnMouse_Enter()
+    {
+        _showCostCoroutine = StartCoroutine(ShowCost());
+    }
+
+    private IEnumerator ShowCost()
+    {
+        while (true)
+        {
+            Links.costText.ShowCost(_usageCost);
+            yield return null;
+        }
+    }
+
+    public void OnMouse_Exit()
+    {
+        StopCoroutine(_showCostCoroutine);
+        Links.costText.HideCost();
+    }
+
+    private void SetInteractableState()
+    {
+        _btn.interactable = _isCharged && Wallet.balance >= _usageCost;
+    }
+
+    private void OnDestroy()
+    {
+        Wallet.OnBalanceChanged -= SetInteractableState;
     }
 }

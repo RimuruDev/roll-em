@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class AbilityButton : MonoBehaviour
+public class AbilityButton1 : MonoBehaviour
 {
     protected int _currentCost;
 

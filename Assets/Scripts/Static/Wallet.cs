@@ -20,7 +20,7 @@ public static class Wallet
 
     public static bool BringCoins(int count)
     {
-        if (count > 0 && count < _balance)
+        if (count > 0 && count <= _balance)
         {
             _balance -= count;
             OnBalanceChanged?.Invoke();

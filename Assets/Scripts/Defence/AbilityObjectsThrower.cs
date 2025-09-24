@@ -1,6 +1,7 @@
+using System.Collections;
 using UnityEngine;
 
-public class ObjectsThrower : MonoBehaviour
+public class AbilityObjectsThrower : MonoBehaviour
 {
     [SerializeField] private GameObject _potionPrefab;
 
@@ -8,7 +9,7 @@ public class ObjectsThrower : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            ThrowPotion();
+            //ThrowPotion();
         }
     }
 
@@ -18,5 +19,21 @@ public class ObjectsThrower : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         potion.targetPoint = mousePos;
+    }
+
+    public void AbilityActivated() => StartCoroutine(WaitPlayerInput());
+
+    private IEnumerator WaitPlayerInput()
+    {
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                ThrowPotion();
+                yield break;
+            }
+
+            yield return null;
+        }
     }
 }
