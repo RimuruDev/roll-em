@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.GridBrushBase;
+
+using Random = UnityEngine.Random;
 
 public class DefaultEnemyAI : EnemyAI
 {
@@ -11,11 +13,27 @@ public class DefaultEnemyAI : EnemyAI
     [SerializeField] protected float _attackCooldown = 1f;
 
     protected Rigidbody2D _rb;
-    private Transform _target;
-    private Damageable _targetDamageable;
-    private Coroutine _currentAttack;
+    protected Damageable _targetDamageable;
 
-    void Start()
+    private Transform _target;
+    private ParticleSystem _bloodPartSys;
+
+    protected Action OnReachTarget;
+    protected Action OnLeaveTarget;
+
+    protected new void Awake()
+    {
+        base.Awake();
+
+        _bloodPartSys = GetComponentInChildren<ParticleSystem>();
+
+        OnDamaged += EmitBlood;
+        OnDamaged += PlayDamagedSound;
+        OnDeath += PlayDeathSound;
+        OnDeath += SetBloodshot;
+    }
+
+    protected void Start()
     {
         switch (_targetType)
         {
@@ -31,10 +49,10 @@ public class DefaultEnemyAI : EnemyAI
 
         _rb = GetComponent<Rigidbody2D>();
 
-        OnBroken += Death;
+        OnBroken += () => Death();
     }
 
-    void FixedUpdate()
+    protected void FixedUpdate()
     {
         Vector2 direction = (_target.position - transform.position).normalized;
 
@@ -62,8 +80,8 @@ public class DefaultEnemyAI : EnemyAI
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform == _target)
-        { 
-            _currentAttack = StartCoroutine(Attack());
+        {
+            OnReachTarget?.Invoke();
         }
     }
 
@@ -71,25 +89,36 @@ public class DefaultEnemyAI : EnemyAI
     {
         if (collision.transform == _target)
         {
-            StopCoroutine(_currentAttack);
+            OnLeaveTarget?.Invoke();
         }
     }
 
-    private IEnumerator Attack()
+    private void PlayDamagedSound()
     {
-        while (true)
-        {
-            _targetDamageable.TakeDamage(_damage);
-            yield return new WaitForSeconds(_attackCooldown);
-        }
+        Links.soundManager.PlayOneshotClip(SoundOneshots[0], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch), true, transform.position);
     }
 
-    private void Death()
+    private void EmitBlood()
     {
-        PlayerData.kills++;
+        _bloodPartSys.Emit((int)(_maxHP - _HP) * (PlayerData.bloodMode ? 100 : 1));
+    }
+
+    private void SetBloodshot()
+    {
+        Instantiate(Links.bloodshot, transform.position, Quaternion.identity);
+    }
+
+    private void PlayDeathSound()
+    {
+        Links.soundManager.PlayOneshotClip(SoundOneshots[1], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch), true, transform.position);
+    }
+
+    protected void Death(bool dropCoins = true, bool countKill = true)
+    {
+        if (countKill) PlayerData.kills++;
+        if (dropCoins) DropCoins();
         OnDeath?.Invoke();
         OnAnyDeath?.Invoke();
-        DropCoins();
         Destroy(gameObject);
     }
 
@@ -99,8 +128,17 @@ public class DefaultEnemyAI : EnemyAI
         drop.coinsCount = Mathf.RoundToInt(_reward * PlayerData.currentGameSpeed);
     }
 
-    private void OnDestroy()
+    protected void OnDestroy()
     {
-        OnBroken -= Death;
+        _bloodPartSys.transform.SetParent(null);
+        EmitBlood();
+        _bloodPartSys.GetComponent<SelfDestroyParticleSystem>().enabled = true;
+        _bloodPartSys.GetComponent<SelfDestroyParticleSystem>().SetSelfDestroyOn();
+
+        OnBroken -= () => Death();
+        OnDamaged -= EmitBlood;
+        OnDamaged -= PlayDamagedSound;
+        OnDeath -= PlayDeathSound;
+        OnDeath -= SetBloodshot;
     }
 }

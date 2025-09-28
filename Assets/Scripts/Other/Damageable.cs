@@ -14,7 +14,7 @@ public class Damageable : MBWithAudio, IDamageable
     public Action OnDamaged;
     public Action OnBroken;
 
-    protected void InitializeHP()
+    protected void Awake()
     {
         _HP = _maxHP;
         OnHPChanged?.Invoke();

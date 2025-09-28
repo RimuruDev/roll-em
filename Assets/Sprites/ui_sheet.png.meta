@@ -445,7 +445,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -454,6 +454,226 @@ TextureImporter:
       bones: []
       spriteID: 36534a2f68fe7f447aef9cf0eccfddac
       internalID: -2049388052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 203
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704459215c9721048a6a1201ec3935ed
+      internalID: -1718994536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 203
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcdf4dcbd0fd594592db713328c7a28
+      internalID: -1708661025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 203
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bcc8d0e4312094e879da41cf2865ed
+      internalID: -890120052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 203
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd42e3abafdd741a6ecf93a7bd96ef
+      internalID: 1927902037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 132
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678f3f51c11ef374ca50d2b67d572c1c
+      internalID: -786609655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 169
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 6, z: 6, w: 6}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb76938164d0f114aa8fe837192e0f1c
+      internalID: 2018084878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 215
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7079e29d4dd427b47a261173b1971cd7
+      internalID: 1317581711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 227
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af6456d226803b4da4797cf300e4031
+      internalID: -195974763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 166
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eef11702582d0747a4f85616b25864e
+      internalID: -1180543019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 166
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0c777530ee22e4cbc519a13ff040a9
+      internalID: -1196599040
       vertices: []
       indices: 
       edges: []
@@ -481,7 +701,17 @@ TextureImporter:
       ui_sheet_12: -341152472
       ui_sheet_13: 2143884167
       ui_sheet_14: -2049388052
+      ui_sheet_15: -1718994536
+      ui_sheet_16: -1708661025
+      ui_sheet_17: -890120052
+      ui_sheet_18: 1927902037
+      ui_sheet_19: -786609655
       ui_sheet_2: -1945205854
+      ui_sheet_20: 2018084878
+      ui_sheet_21: 1317581711
+      ui_sheet_22: -195974763
+      ui_sheet_23: -1180543019
+      ui_sheet_24: -1196599040
       ui_sheet_3: 391956504
       ui_sheet_4: -954540439
       ui_sheet_5: -1208215311

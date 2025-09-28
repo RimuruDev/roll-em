@@ -8,12 +8,15 @@ public class ShortcutsManager : MonoBehaviour
 
     private void Update()
     {
-        foreach (var shortcut in Shortcuts)
+        if (Time.timeScale > 0)
         {
-            if (Input.GetKeyDown(shortcut.key))
+            foreach (var shortcut in Shortcuts)
             {
-                shortcut.keyEvent?.Invoke();
-                //break;
+                if (Input.GetKeyDown(shortcut.key))
+                {
+                    shortcut.keyEvent?.Invoke();
+                    //break;
+                }
             }
         }
     }

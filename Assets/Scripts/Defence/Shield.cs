@@ -4,15 +4,16 @@ public class Shield : Damageable
 {
     [Header("Shield settings")]
     [SerializeField] private float _damageMultiplier = 1f;
+    [SerializeField] private float _enemyCollisionDamage = 1f;
     private Rigidbody2D _rb;
     private Animator _animator;
     private SpriteRenderer _sr;
 
     private Sprite _lastSprite;
 
-    private void Awake()
+    private new void Awake()
     {
-        InitializeHP();
+        base.Awake();
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _sr = GetComponent<SpriteRenderer>();
@@ -45,7 +46,7 @@ public class Shield : Damageable
                 normalImpulse += collision.GetContact(i).normalImpulse;
             }
 
-            TakeDamage(enemy.damage);
+            TakeDamage(_enemyCollisionDamage);
 
             enemy.TakeDamage(normalImpulse * _damageMultiplier);
         }

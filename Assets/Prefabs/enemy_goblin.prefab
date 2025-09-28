@@ -63,7 +63,6 @@ MonoBehaviour:
   _rotationSpeed: 60
   _attackCooldown: 1
   _animationSpeed: 4
-  _partSys: {fileID: 0}
 --- !u!212 &4283186998365281654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -230,7 +229,7 @@ GameObject:
   - component: {fileID: 5550178388341228484}
   - component: {fileID: 8498676347702928226}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: bloodPartSys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

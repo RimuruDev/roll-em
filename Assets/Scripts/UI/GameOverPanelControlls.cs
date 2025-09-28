@@ -2,15 +2,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverPanelControlls : MonoBehaviour
+public class GameOverPanelControlls : PausePanelControlls
 {
     [SerializeField] private TMP_Text _killsText;
-
-    public void RestartBtn_Click()
-    {
-        Links.gameManager.CancelPauseTime();
-        Links.gameManager.ReloadScene();
-    }
 
     private void OnEnable()
     {

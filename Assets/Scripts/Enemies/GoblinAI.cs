@@ -1,57 +1,54 @@
+using System.Collections;
 using UnityEngine;
 
 public class GoblinAI : DefaultEnemyAI
 {
     [Header("Goblin settings")]
     [SerializeField] private float _animationSpeed = 1;
+
     private Animator _animator;
-    [SerializeField] private ParticleSystem _partSys;
+    private Coroutine _currentAttack;
 
-    private void Awake()
+    private new void Awake()
     {
-        InitializeHP();
+        base.Awake();
         _animator = GetComponent<Animator>();
-        _partSys = GetComponentInChildren<ParticleSystem>();
-        OnDamaged += EmitBlood;
-        OnDamaged += PlayDamagedSound;
-        OnDeath += PlayDeathSound;
-        OnDeath += SetBloodshot;
-    }
 
-    private void SetBloodshot()
-    {
-        Instantiate(Links.bloodshot, transform.position, Quaternion.identity);
+        OnReachTarget += StartAttack;
+        OnLeaveTarget += StopAttack;
     }
 
     private void Update()
     {
-        _animator.SetFloat("RunSpeed", _rb.linearVelocity.magnitude / _maxSpeed * _animationSpeed);
+        _animator.SetFloat(_animator.parameters[0].name, _rb.linearVelocity.magnitude / _maxSpeed * _animationSpeed);
     }
 
-    private void EmitBlood()
+    protected virtual void StartAttack()
     {
-        _partSys.Emit((int)(_maxHP - _HP) * (PlayerData.bloodMode ? 100 : 1));
+        _currentAttack = StartCoroutine(Attack());
     }
 
-    private void PlayDamagedSound()
+    private void StopAttack()
     {
-        Links.soundManager.PlayOneshotClip(SoundOneshots[0], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch), true, transform.position);
+        if (_currentAttack != null)
+        {
+            StopCoroutine(_currentAttack);
+        }
     }
 
-    private void PlayDeathSound()
+    private IEnumerator Attack()
     {
-        Links.soundManager.PlayOneshotClip(SoundOneshots[1], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch), true, transform.position);
+        while (true)
+        {
+            _targetDamageable.TakeDamage(_damage);
+            yield return new WaitForSeconds(_attackCooldown);
+        }
     }
 
-    private void OnDestroy()
+    private new void OnDestroy()
     {
-        _partSys.transform.SetParent(null);
-        EmitBlood();
-        _partSys.GetComponent<SelfDestroyParticleSystem>().enabled = true;
-        _partSys.GetComponent<SelfDestroyParticleSystem>().SetSelfDestroyOn();
-        OnDamaged -= EmitBlood;
-        OnDamaged -= PlayDamagedSound;
-        OnDeath -= PlayDeathSound;
-        OnDeath -= SetBloodshot;
+        base.OnDestroy();
+        OnReachTarget -= StartAttack;
+        OnLeaveTarget -= StopAttack;
     }
 }
