@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnemiesSpawnerMain
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 7b5d9b801ed519a4684d9ce154fb870c, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: Assembly-CSharp::EnemiesSpawner
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Enemies.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'Enemies.Array.data[0]'
+    value: 
+    objectReference: {fileID: 7473301855650962615, guid: f6bb6532a7c6c224facd1f27b0e7c537, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'Enemies.Array.data[1]'
+    value: 
+    objectReference: {fileID: 678132315180903743, guid: 40b54dcda78e8d74b964e939978ee36c, type: 3}
+  - target: {fileID: 0}
+    propertyPath: EnemiesWeights.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'EnemiesWeights.Array.data[0]'
+    value: 90
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'EnemiesWeights.Array.data[1]'
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enemiesContainer
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _spawnPivot
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _hpBar
+    value: 
+    objectReference: {fileID: 453656907633529357, guid: f450cdc43feba2e4fb797c54f356fc80, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _barsContainer
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _spawnDelay
+    value: 7
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
+  m_CoupledType:
+    m_NativeTypeID: 0
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_CoupledProperties: []

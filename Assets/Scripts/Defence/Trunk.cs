@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class Shield : Damageable
+public class Trunk : Damageable
 {
-    [Header("Shield settings")]
+    public float damageMultiplier { get => _damageMultiplier; set => _damageMultiplier = value; }
+
+    [Header("Trunk settings")]
     [SerializeField] private float _damageMultiplier = 1f;
     [SerializeField] private float _enemyCollisionDamage = 1f;
     private Rigidbody2D _rb;

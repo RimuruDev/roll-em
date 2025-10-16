@@ -4,13 +4,27 @@ using UnityEngine;
 public class Damageable : MBWithAudio, IDamageable
 {
     public float hp => _HP;
-    public float maxHP => _maxHP;
+    public float maxHP
+    {
+        get => _maxHP;
+        set
+        {
+            if (value > 0)
+            {
+                _maxHP = value;
+                _HP = value;
+                OnMaxHPChanged?.Invoke();
+                OnHPChanged?.Invoke();
+            }
+        }
+    }
 
     [Header("Damageable settings")]
     [SerializeField] protected float _maxHP;
     protected float _HP;
 
     public Action OnHPChanged;
+    public Action OnMaxHPChanged;
     public Action OnDamaged;
     public Action OnBroken;
 

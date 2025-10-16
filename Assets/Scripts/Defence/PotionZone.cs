@@ -13,7 +13,7 @@ public class PotionZone : MonoBehaviour
     private ParticleSystem.ShapeModule _shape;
     private ParticleSystem.EmissionModule _emission;
     private float _time;
-
+    
     private void Awake()
     {
         _ps = GetComponent<ParticleSystem>();

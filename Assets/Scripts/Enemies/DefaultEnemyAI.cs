@@ -115,10 +115,10 @@ public class DefaultEnemyAI : EnemyAI
 
     protected void Death(bool dropCoins = true, bool countKill = true)
     {
-        if (countKill) PlayerData.kills++;
+        if (countKill) PlayerData.EncountKills();
         if (dropCoins) DropCoins();
         OnDeath?.Invoke();
-        OnAnyDeath?.Invoke();
+        //OnAnyDeath?.Invoke();
         Destroy(gameObject);
     }
 

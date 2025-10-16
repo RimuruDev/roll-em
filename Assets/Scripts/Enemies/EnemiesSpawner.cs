@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemiesSpawner : MonoBehaviour
 {
+    public Transform[] enemies => Enemies;
+
     [SerializeField] private Transform[] Enemies;
     [SerializeField] private int[] EnemiesWeights;
     [SerializeField] private Transform _enemiesContainer;
@@ -59,11 +61,5 @@ public class EnemiesSpawner : MonoBehaviour
 
             yield return new WaitForSeconds(_spawnDelay);
         }
-    }
-
-    private struct EnemyWeighntedSpawnData
-    {
-        public Transform enemy;
-        public float weight;
     }
 }

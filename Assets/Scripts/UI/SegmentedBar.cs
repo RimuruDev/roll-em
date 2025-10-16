@@ -1,14 +1,28 @@
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SegmentedBar : MonoBehaviour
 {
-    public int activeSegmentsCount { get => _activeSegmentsCount; }
-    public int fullSegmentsCount { get => Segments.Count; }
-    public float barValue {
-        get => (float)_activeSegmentsCount / Segments.Count; 
+    public int activeSegmentsCount => _activeSegmentsCount;
+    public int segmentsCount
+    {
+        get => _segmentsCount;
+        set
+        {
+            if (value > 0)
+            {
+                _segmentsCount = value;
+                UpdateSegments();
+            }
+        }
+    }
+    public float barValue
+    {
+        get => (float)_activeSegmentsCount / Segments.Count;
         set
         {
             value = Mathf.Clamp01(value);
@@ -19,7 +33,14 @@ public class SegmentedBar : MonoBehaviour
         }
     }
 
+
+    [SerializeField] private int _segmentsCount;
     [SerializeField] private int _activeSegmentsCount;
+    [SerializeField] private GameObject _segmentsPrefab;
+    [SerializeField] private Sprite _leftSegmentSprite;
+    [SerializeField] private Sprite _middleSegmentSprite;
+    [SerializeField] private Sprite _rightSegmentSprite;
+    [SerializeField] private Sprite _monoSegmentSprite;
     [SerializeField] private Color _enabledColor = Color.white;
     [SerializeField] private Color _disabledColor = Color.gray9;
     [SerializeField] private bool _inversible = false;
@@ -32,6 +53,7 @@ public class SegmentedBar : MonoBehaviour
     private void Awake()
     {
         FillSegmentsList();
+        UpdateSegments();
     }
 
     private void OnValidate()
@@ -55,6 +77,49 @@ public class SegmentedBar : MonoBehaviour
         else
         {
             _activeSegmentsCount = Mathf.Clamp(_activeSegmentsCount, 0, Segments.Count);
+        }
+
+        SetSegmentsActiveness();
+    }
+
+    private void UpdateSegments()
+    {
+
+        foreach (Transform segment in transform)
+        {
+            Destroy(segment.gameObject);
+        }
+
+        Segments = new();
+
+        for (int i = 0; i < _segmentsCount; i++)
+        {
+            GameObject segment = Instantiate(_segmentsPrefab, transform);
+            segment.name = $"segment_{i}";
+            Segments.Add(segment.GetComponent<Image>());
+        }
+
+        for (int i = 0; i < Segments.Count; i++)
+        {
+            if (_segmentsCount == 1)
+            {
+                Segments[i].sprite = _monoSegmentSprite;
+            }
+            else
+            {
+                if (i == 0)
+                {
+                    Segments[i].sprite = _leftSegmentSprite;
+                }
+                else if (i == Segments.Count - 1)
+                {
+                    Segments[i].sprite = _rightSegmentSprite;
+                }
+                else
+                {
+                    Segments[i].sprite = _middleSegmentSprite;
+                }
+            }
         }
 
         SetSegmentsActiveness();

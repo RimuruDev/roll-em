@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class ShieldController : MonoBehaviour
+public class TrunkController : MonoBehaviour
 {
+    public float rotateSpeed { get => _rotateSpeed; set => _rotateSpeed = value; }
+
     [SerializeField] private float _rotateSpeed = 5;
     private Rigidbody2D _rb;
 

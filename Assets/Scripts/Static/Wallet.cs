@@ -2,7 +2,7 @@ using System;
 
 public static class Wallet
 {
-    public static int balance { get => _balance;}
+    public static int balance { get => _balance; }
 
 
     private static int _balance = 0;
@@ -29,5 +29,9 @@ public static class Wallet
         return false;
     }
 
-    public static void ClearBalance() => _balance = 0;
+    public static void ClearBalance()
+    {
+        _balance = 0;
+        OnBalanceChanged?.Invoke();
+    }
 }

@@ -9,7 +9,7 @@ public class HPBar : MonoBehaviour
 
     private Slider _slider;
 
-    private void Awake()
+    protected void Awake()
     {
         _slider = GetComponent<Slider>();
         Initialize();
@@ -20,18 +20,19 @@ public class HPBar : MonoBehaviour
         if (checkingObject != null)
         {
             checkingObject.OnHPChanged += UpdateBar;
+            checkingObject.OnMaxHPChanged += UpdateBar;
 
-            _slider.maxValue = checkingObject.maxHP;
-            _slider.value = checkingObject.hp;
+            UpdateBar();
         }
     }
 
     private void UpdateBar()
     {
+        _slider.maxValue = checkingObject.maxHP;
         _slider.value = checkingObject.hp;
     }
 
-    private void OnDestroy()
+    protected void OnDestroy()
     {
         if (checkingObject != null)
         {

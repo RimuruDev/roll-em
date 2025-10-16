@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TrunkMain
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 826608258ec80e445a6691d9b72d0cee, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: Assembly-CSharp::Shield
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SoundOneshots.Array.size
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'SoundOneshots.Array.data[0]'
+    value: 
+    objectReference: {fileID: 8300000, guid: dece10f5944eeaa4097e11fc034a2ba4, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'SoundOneshots.Array.data[1]'
+    value: 
+    objectReference: {fileID: 8300000, guid: 2bc624688a043e54683c47ec1b803218, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'SoundOneshots.Array.data[2]'
+    value: 
+    objectReference: {fileID: 8300000, guid: ac3f011385375ad47b12117ca094536d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'SoundOneshots.Array.data[3]'
+    value: 
+    objectReference: {fileID: 8300000, guid: 3ceecfaeb9527da429f52126fa145416, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'SoundOneshots.Array.data[4]'
+    value: 
+    objectReference: {fileID: 8300000, guid: f7e4d1ff8e980a44ab2a481073c14460, type: 3}
+  - target: {fileID: 0}
+    propertyPath: 'SoundOneshots.Array.data[5]'
+    value: 
+    objectReference: {fileID: 8300000, guid: aa97d56b51b4fd140af843ef924c76b8, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _minPitch
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _maxPitch
+    value: 1.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _maxHP
+    value: 200
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _damageMultiplier
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enemyCollisionDamage
+    value: 1
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
+  m_CoupledType:
+    m_NativeTypeID: 0
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_CoupledProperties: []

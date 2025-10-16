@@ -7,10 +7,11 @@ public class MenuControlls : MonoBehaviour
     [SerializeField] private TMP_Text _killsText;
     [SerializeField] private GameObject _gameOverPanel;
 
-    private void Start()
+    private void Awake()
     {
         Wallet.OnBalanceChanged += UpdateCoinsText;
-        EnemyAI.OnAnyDeath += UpdateKillsText;
+        //EnemyAI.OnAnyDeath += UpdateKillsText;
+        PlayerData.OnKillsCountChanged += UpdateKillsText;
         Links.tower.GetComponent<Damageable>().OnBroken += ShowGameOverPanel;
         Links.mainShield.GetComponent<Damageable>().OnBroken += ShowGameOverPanel;
     }
@@ -34,7 +35,8 @@ public class MenuControlls : MonoBehaviour
     private void OnDestroy()
     {
         Wallet.OnBalanceChanged -= UpdateCoinsText;
-        EnemyAI.OnAnyDeath -= UpdateKillsText;
+        //EnemyAI.OnAnyDeath -= UpdateKillsText;
+        PlayerData.OnKillsCountChanged -= UpdateKillsText;
         //Links.tower.GetComponent<Damageable>().OnBroken -= ShowGameOverPanel;
     }
 }

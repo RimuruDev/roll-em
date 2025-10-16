@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 592638ffb6f06b2499b15102e159d1e2, type: 3}
   _minPitch: 0.65
   _maxPitch: 0.7
-  _maxHP: 10
+  _maxHP: 8
   _targetType: 0
   _damage: 20
   _reward: 3

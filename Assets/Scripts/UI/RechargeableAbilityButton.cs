@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class RechargeableAbilityButton : MonoBehaviour
 {
+    public int usageCost { get => _usageCost; set => _usageCost = value; }
+    public int rechargeTime { get => _rechargeTime; set => _rechargeTime = value; }
+
     [SerializeField] private int _usageCost = 1;
     [SerializeField] private int _rechargeTime = 10;
 
@@ -15,7 +18,6 @@ public class RechargeableAbilityButton : MonoBehaviour
     private Coroutine _showCostCoroutine;
 
     public UnityEvent OnAbilityUsed;
-
 
     private void Awake()
     {
