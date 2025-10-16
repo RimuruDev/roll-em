@@ -8,6 +8,8 @@ public class SaveLoadManager : MonoBehaviour
     [SerializeField] private bool LoadOnAwake = false;
     [SerializeField] private string savePath;
     private SaveData _gameData = new();
+    private Damageable _tower;
+    private Damageable _trunk;
 
     private void Awake()
     {
@@ -20,6 +22,9 @@ public class SaveLoadManager : MonoBehaviour
                 LoadGame();
             }
         }
+
+        _tower = Links.tower.GetComponent<Damageable>();
+        _trunk = Links.trunk.GetComponent<Damageable>();
     }
 
     private void Update()
@@ -30,6 +35,7 @@ public class SaveLoadManager : MonoBehaviour
             {
                 PrepareEnemiesData();
                 PreparePlayerStats();
+                PrepareLevelObjectsData();
                 SaveGameData();
             }
             if (Input.GetKeyDown(KeyCode.L))
@@ -75,6 +81,13 @@ public class SaveLoadManager : MonoBehaviour
         _gameData.currentGameSpeed = PlayerData.currentGameSpeed;
     }
 
+    public void PrepareLevelObjectsData()
+    {
+        _gameData.towerHP = (int)_tower.hp;
+        _gameData.trunkHP = (int)_trunk.hp;
+        _gameData.trunkRotation = Links.trunkPivot.GetComponent<Rigidbody2D>().rotation;
+    }
+
     public void SaveGameData()
     {
         string json = JsonUtility.ToJson(_gameData, true);
@@ -84,17 +97,27 @@ public class SaveLoadManager : MonoBehaviour
 
     public void LoadGame()
     {
+        //ready
         string json = File.ReadAllText(savePath);
         _gameData = JsonUtility.FromJson<SaveData>(json);
 
+        //ready
         foreach (EnemySLData data in _gameData.enemiesData)
         {
-            Instantiate(Links.enemiesSpawner.enemies[data.typeIndex], data.position, Quaternion.Euler(0, 0, data.rotation), Links.enemiesContainer);
+            Links.enemiesSpawner.SpawnImmediate(data.typeIndex, data.position, data.rotation, data.hp);
         }
 
+        //ready
         Wallet.ClearBalance();
         Wallet.AddCoins(_gameData.coinsCount);
         PlayerData.EncountKills(_gameData.killsCount);
+
+        _tower.SetHP(_gameData.towerHP);
+        _trunk.SetHP(_gameData.trunkHP);
+
+        Links.trunkPivot.GetComponent<Rigidbody2D>().rotation = _gameData.trunkRotation;
+
+        //test or rework
         PlayerData.currentGameSpeed = _gameData.currentGameSpeed;
         Time.timeScale = _gameData.currentGameSpeed;
     }
@@ -103,8 +126,17 @@ public class SaveLoadManager : MonoBehaviour
 [Serializable]
 public class SaveData
 {
+    //Enemies data
     public List<EnemySLData> enemiesData;
+
+    //Player stats
     public int coinsCount;
     public int killsCount;
     public float currentGameSpeed;
+
+    //Level objects
+    public int towerHP;
+    public int trunkHP;
+    public float trunkRotation;
+    public float trunkSpeed;
 }

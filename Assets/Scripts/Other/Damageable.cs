@@ -47,15 +47,21 @@ public class Damageable : MBWithAudio, IDamageable
         }
     }
 
-    public void Broken()
-    {
-        OnBroken?.Invoke();
-    }
-
     public void Heal(int hpCount = int.MaxValue)
     {
         _HP += hpCount;
         _HP = Mathf.Clamp(_HP, 1, _maxHP);
         OnHPChanged?.Invoke();
+    }
+
+    public void SetHP(float count)
+    {
+        _HP = Mathf.Clamp(count, 0.01f, _maxHP);
+        OnHPChanged?.Invoke();
+    }
+
+    public void Broken()
+    {
+        OnBroken?.Invoke();
     }
 }

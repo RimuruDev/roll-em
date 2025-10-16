@@ -6,6 +6,8 @@ public class LinksContainer : MonoBehaviour
     [Header("Global")]
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private Transform _tower;
+    [SerializeField] private Transform _trunk;
+    [SerializeField] private Transform _trunkPivot;
     [SerializeField] private Transform _mainShield;
     [SerializeField] private Transform _enemiesContainer;
     [SerializeField] private SoundManager _soundManager;
@@ -22,6 +24,8 @@ public class LinksContainer : MonoBehaviour
     {
         Links.gameManager = _gameManager;
         Links.tower = _tower;
+        Links.trunk = _trunk;
+        Links.trunkPivot = _trunkPivot;
         Links.mainShield = _mainShield;
         Links.enemiesContainer = _enemiesContainer;
         Links.soundManager = _soundManager;
@@ -40,6 +44,8 @@ public static class Links
 {
     public static GameManager gameManager;
     public static Transform tower;
+    public static Transform trunk;
+    public static Transform trunkPivot;
     public static Transform mainShield;
     public static Transform enemiesContainer;
     public static SoundManager soundManager;

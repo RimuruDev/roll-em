@@ -49,17 +49,25 @@ public class EnemiesSpawner : MonoBehaviour
                 }
             }
 
-            Transform enemy = Instantiate(Enemies[index], _spawnPivot.position, transform.rotation, _enemiesContainer);
-
-            UIFollowGameObject bar = Instantiate(_hpBar, enemy.position, Quaternion.identity, _barsContainer).GetComponent<UIFollowGameObject>();
-            bar.targetObject = enemy;
-            bar.offset = enemy.localScale.y / 2;
-
-            HPBar enemyBar = bar.GetComponent<HPBar>();
-            enemyBar.checkingObject = enemy.GetComponent<Damageable>();
-            enemyBar.Initialize();
+            SpawnImmediate(index, _spawnPivot.position, transform.eulerAngles.z);
 
             yield return new WaitForSeconds(_spawnDelay);
         }
+    }
+
+    public void SpawnImmediate(int enemyIndex, Vector3 position, float zEuler, float hp = -1)
+    {
+
+        Transform enemy = Instantiate(Enemies[enemyIndex], position, Quaternion.Euler(0, 0, zEuler), _enemiesContainer);
+
+        if (hp > 0) enemy.GetComponent<Damageable>().SetHP(hp);
+
+        UIFollowGameObject bar = Instantiate(_hpBar, enemy.position, Quaternion.identity, _barsContainer).GetComponent<UIFollowGameObject>();
+        bar.targetObject = enemy;
+        bar.offset = enemy.localScale.y / 2;
+
+        HPBar enemyBar = bar.GetComponent<HPBar>();
+        enemyBar.checkingObject = enemy.GetComponent<Damageable>();
+        enemyBar.Initialize();
     }
 }

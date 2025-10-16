@@ -3055,7 +3055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed6d37b615fc2a479b0518296c1fd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveLoadManager
-  LoadOnAwake: 1
+  LoadOnAwake: 0
   savePath: 
 --- !u!1 &369989766
 GameObject:
@@ -3716,7 +3716,7 @@ MonoBehaviour:
   _minPitch: 0.8
   _maxPitch: 1.2
   _maxHP: 200
-  _damageMultiplier: 10
+  _damageMultiplier: 1
   _enemyCollisionDamage: 1
 --- !u!60 &480947617
 PolygonCollider2D:
@@ -4995,6 +4995,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LinksContainer
   _gameManager: {fileID: 1482487171}
   _tower: {fileID: 1733702013}
+  _trunk: {fileID: 480947613}
+  _trunkPivot: {fileID: 1306194946}
   _mainShield: {fileID: 480947613}
   _enemiesContainer: {fileID: 1038521710}
   _soundManager: {fileID: 536257395}
@@ -5828,7 +5830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &744643798
 Transform:
   m_ObjectHideFlags: 0
