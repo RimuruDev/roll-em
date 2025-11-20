@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,6 +29,8 @@ public class SegmentedBar : MonoBehaviour
             _activeSegmentsCount = Mathf.RoundToInt(value * Segments.Count);
 
             SetSegmentsActiveness();
+
+            OnValueChanged?.Invoke();
         }
     }
 

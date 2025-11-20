@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class UpgradeControlls : MonoBehaviour
 {
+    public int nextLevel { get => _nextLevel; set => _nextLevel = value; }
+
     [SerializeField] private Upgrade _upgrade;
     [SerializeField] private SegmentedBar _bar;
     [SerializeField] private Button _button;
@@ -15,11 +17,15 @@ public class UpgradeControlls : MonoBehaviour
     private EventTrigger _eventTrigger;
     private TMP_Text _upgradeInfoText;
     private PropertyInfo _prop;
-    private int _nextLevel = 0;
+    [SerializeField, ReadOnly] private int _nextLevel = 0;
 
     private void Awake()
     {
+        Initialize();
+    }
 
+    public void Initialize()
+    {
         Type type = _upgrade.component.GetType();
         _prop = type.GetProperty(_upgrade.propertyName, BindingFlags.Public | BindingFlags.Instance);
 
@@ -45,7 +51,8 @@ public class UpgradeControlls : MonoBehaviour
         }
     }
 
-#if UNITY_EDITOR
+    //TODO: remove temp code
+/*#if UNITY_EDITOR
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
@@ -53,11 +60,21 @@ public class UpgradeControlls : MonoBehaviour
             Wallet.AddCoins(1);
         }
     }
-#endif
+#endif*/
 
-    public void ApplyNextUpgrade()
+    public void ApplyNextUpgrade(bool needCoins = true)
     {
-        if (Wallet.BringCoins(_upgrade.LevelCosts[_nextLevel]))
+        bool paymentSuccess = false;
+        if (needCoins)
+        {
+            paymentSuccess = Wallet.BringCoins(_upgrade.LevelCosts[_nextLevel]);
+        }
+        else
+        {
+            paymentSuccess = true;
+        }
+
+        if (paymentSuccess)
         {
             Type propType = _prop.GetValue(_upgrade.component).GetType();
             if (propType == typeof(float))
@@ -68,11 +85,12 @@ public class UpgradeControlls : MonoBehaviour
             {
                 _prop.SetValue(_upgrade.component, (int)_upgrade.LevelValues[_nextLevel]);
             }
-
+            //ApplyUpgradeToLevel(_nextLevel);
 
             Debug.Log(_prop.GetValue(_upgrade.component));
             _nextLevel++;
-            _bar.EnableNewSegments(1);
+            //_bar.EnableNewSegments(1);
+            _bar.SetEnabledCount(_nextLevel);
 
             if (_nextLevel >= _upgrade.LevelValues.Length)
             {
@@ -83,6 +101,21 @@ public class UpgradeControlls : MonoBehaviour
             }
         }
     }
+
+    /*public void ApplyUpgradeToLevel(int levelNum)
+    {
+        if (levelNum >= _upgrade.LevelValues.Length) levelNum = _upgrade.LevelValues.Length - 1;
+
+        Type propType = _prop.GetValue(_upgrade.component).GetType();
+        if (propType == typeof(float))
+        {
+            _prop.SetValue(_upgrade.component, _upgrade.LevelValues[levelNum]);
+        }
+        else if (propType == typeof(int))
+        {
+            _prop.SetValue(_upgrade.component, (int)_upgrade.LevelValues[levelNum]);
+        }
+    }*/
 
     public void OnMouse_Enter()
     {

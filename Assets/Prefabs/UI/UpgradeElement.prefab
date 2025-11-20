@@ -61,7 +61,7 @@ MonoBehaviour:
     LevelCosts: 
   _bar: {fileID: 5511659280670034481}
   _button: {fileID: 2015040839896933727}
-  _eventTrigger: {fileID: 7598103041989635915}
+  _nextLevel: 0
 --- !u!222 &2626234121432155385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -268,14 +268,14 @@ MonoBehaviour:
       - m_Target: {fileID: 6004554440564847123}
         m_TargetAssemblyTypeName: UpgradeControlls, Assembly-CSharp
         m_MethodName: ApplyNextUpgrade
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 6004554440564847123}
         m_TargetAssemblyTypeName: UpgradeControlls, Assembly-CSharp

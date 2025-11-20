@@ -28,6 +28,7 @@ public class MenuControlls : MonoBehaviour
 
     private void ShowGameOverPanel()
     {
+        Links.saveLoadManager.ClearSavedData();
         Links.gameManager.PauseTime();
         _gameOverPanel.SetActive(true);
     }

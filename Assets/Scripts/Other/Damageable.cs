@@ -21,7 +21,7 @@ public class Damageable : MBWithAudio, IDamageable
 
     [Header("Damageable settings")]
     [SerializeField] protected float _maxHP;
-    protected float _HP;
+    protected float _HP = -1;
 
     public Action OnHPChanged;
     public Action OnMaxHPChanged;
@@ -30,8 +30,11 @@ public class Damageable : MBWithAudio, IDamageable
 
     protected void Awake()
     {
-        _HP = _maxHP;
-        OnHPChanged?.Invoke();
+        if (_HP == -1)
+        {
+            _HP = _maxHP;
+            OnHPChanged?.Invoke();
+        }
     }
 
     public void TakeDamage(float count)

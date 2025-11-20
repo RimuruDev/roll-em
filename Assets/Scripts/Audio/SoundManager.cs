@@ -3,11 +3,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private SegmentedBar _volumeBar;
-
     private void Awake()
     {
-        _volumeBar.barValue = GameSettings.soundVolume;
+        Links.volumeBar.barValue = GameSettings.soundVolume;
         UpdateSoundVolume();
     }
 
@@ -29,6 +27,6 @@ public class SoundManager : MonoBehaviour
 
     public void UpdateSoundVolume()
     {
-        GameSettings.soundVolume = _volumeBar.barValue;
+        GameSettings.soundVolume = Links.volumeBar.barValue;
     }
 }

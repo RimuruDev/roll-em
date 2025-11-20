@@ -3,16 +3,21 @@ using UnityEngine;
 
 public class GoblinAI : DefaultEnemyAI
 {
+    public float remainAttackCooldown { get => _remainAttackCooldown; set => _remainAttackCooldown = value; }
+
     [Header("Goblin settings")]
     [SerializeField] private float _animationSpeed = 1;
 
     private Animator _animator;
     private Coroutine _currentAttack;
+    private float _remainAttackCooldown;
+
 
     private new void Awake()
     {
         base.Awake();
         _animator = GetComponent<Animator>();
+        _remainAttackCooldown = _attackCooldown;
 
         OnReachTarget += StartAttack;
         OnLeaveTarget += StopAttack;
@@ -40,8 +45,13 @@ public class GoblinAI : DefaultEnemyAI
     {
         while (true)
         {
+            while (_remainAttackCooldown > 0)
+            {
+                yield return null;
+                _remainAttackCooldown -= Time.deltaTime;
+            }
             _targetDamageable.TakeDamage(_damage);
-            yield return new WaitForSeconds(_attackCooldown);
+            _remainAttackCooldown = _attackCooldown;
         }
     }
 

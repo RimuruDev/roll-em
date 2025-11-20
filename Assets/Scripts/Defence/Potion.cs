@@ -4,6 +4,7 @@ public class Potion : MBWithAudio
 {
     public Vector3 targetPoint
     {
+        get => _target;
         set
         {
             _target = value;
@@ -24,9 +25,9 @@ public class Potion : MBWithAudio
         _movement.OnReachedTarget += SpawnPotionZone;
     }
 
-    void SpawnPotionZone()
+    private void SpawnPotionZone()
     {
-        Instantiate(_potionZonePrefab, transform.position, Quaternion.identity);
+        Instantiate(_potionZonePrefab, transform.position, Quaternion.identity, transform.parent);
         Destroy(gameObject);
     }
 

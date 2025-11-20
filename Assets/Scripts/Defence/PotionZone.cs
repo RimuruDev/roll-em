@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PotionZone : MonoBehaviour
 {
+    public float passedTime { get => _time; set => _time = value; }
+
     [SerializeField] private int _emissionRate = 20;
     [SerializeField] private float _damagePerSec = 1;
     [SerializeField] private int _ticksPerSec = 1;
@@ -13,7 +15,8 @@ public class PotionZone : MonoBehaviour
     private ParticleSystem.ShapeModule _shape;
     private ParticleSystem.EmissionModule _emission;
     private float _time;
-    
+
+
     private void Awake()
     {
         _ps = GetComponent<ParticleSystem>();
@@ -46,7 +49,6 @@ public class PotionZone : MonoBehaviour
                     enemy.GetComponent<Damageable>().TakeDamage(_damagePerSec / _ticksPerSec);
                 }
             }
-
 
             yield return new WaitForSeconds(1f / _ticksPerSec);
             _time += 1f / _ticksPerSec;

@@ -1,0 +1,28 @@
+{
+    "enemiesData": [],
+    "coinsCount": 0,
+    "killsCount": 0,
+    "currentGameSpeed": 1.0150001049041749,
+    "towerHP": 100,
+    "trunkHP": 200,
+    "trunkRotation": 0.0,
+    "trunkPosition": {
+        "x": 1.399999976158142,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "trunkSpeed": 0.0,
+    "soundVolume": -536870912.0,
+    "showLearning": false,
+    "chargePercent": 0.5984095931053162,
+    "potions": [],
+    "potionZones": [],
+    "UpgradeLevels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+}

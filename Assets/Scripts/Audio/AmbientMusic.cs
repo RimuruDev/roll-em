@@ -12,6 +12,9 @@ public class AmbientMusic : MonoBehaviour
 
     public void UpdateVolume()
     {
-        _source.volume = GameSettings.soundVolume;
+        if (_source != null)
+        {
+            _source.volume = GameSettings.soundVolume;
+        }
     }
 }

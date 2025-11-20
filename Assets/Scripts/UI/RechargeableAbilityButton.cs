@@ -7,6 +7,7 @@ public class RechargeableAbilityButton : MonoBehaviour
 {
     public int usageCost { get => _usageCost; set => _usageCost = value; }
     public int rechargeTime { get => _rechargeTime; set => _rechargeTime = value; }
+    public float currentChargePercent { get => _icon.fillAmount; set => _currentChargePercent = value; }
 
     [SerializeField] private int _usageCost = 1;
     [SerializeField] private int _rechargeTime = 10;
@@ -14,6 +15,7 @@ public class RechargeableAbilityButton : MonoBehaviour
     private Image _icon;
     private Button _btn;
 
+    private float _currentChargePercent = 0;
     private bool _isCharged = false;
     private Coroutine _showCostCoroutine;
 
@@ -29,7 +31,7 @@ public class RechargeableAbilityButton : MonoBehaviour
     private void Start()
     {
         _btn.interactable = false;
-        _icon.fillAmount = 0;
+        _icon.fillAmount = _currentChargePercent;
         StartCoroutine(Recharge());
     }
 
@@ -37,10 +39,12 @@ public class RechargeableAbilityButton : MonoBehaviour
     {
         _isCharged = false;
         _btn.interactable = false;
-        _icon.fillAmount = 0;
+        _icon.fillAmount = _currentChargePercent;
+
         while (_icon.fillAmount < 1)
         {
             _icon.fillAmount += Time.deltaTime / _rechargeTime;
+            _currentChargePercent = _icon.fillAmount;
             yield return null;
         }
         _isCharged = true;
@@ -51,6 +55,7 @@ public class RechargeableAbilityButton : MonoBehaviour
     {
         if (Wallet.BringCoins(_usageCost))
         {
+            _currentChargePercent = 0;
             OnAbilityUsed?.Invoke();
             StartCoroutine(Recharge());
         }

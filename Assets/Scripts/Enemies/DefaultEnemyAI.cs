@@ -124,7 +124,7 @@ public class DefaultEnemyAI : EnemyAI
 
     private void DropCoins()
     {
-        CoinDrop drop = Instantiate(Links.coinPrefab, transform.position, Quaternion.identity).GetComponent<CoinDrop>();
+        CoinDrop drop = Instantiate(Links.coinPrefab, transform.position, Quaternion.identity, Links.droppedCoinsContainer).GetComponent<CoinDrop>();
         drop.coinsCount = Mathf.RoundToInt(_reward * PlayerData.currentGameSpeed);
     }
 

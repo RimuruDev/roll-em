@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CoinDrop : MonoBehaviour
 {
-    public int coinsCount { set => _coinsCount = value; }
+    public int coinsCount { get => _coinsCount; set => _coinsCount = value; }
 
     [SerializeField] private float _moveSpeed = 1;
     [SerializeField] private float _minDelta = .1f;

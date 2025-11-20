@@ -16,7 +16,7 @@ public class AbilityObjectsThrower : MBWithAudio
     private void ThrowPotion()
     {
         Links.soundManager.PlayOneshotClip(SoundOneshots[0], GameSettings.soundVolume, Random.Range(_minPitch, _maxPitch));
-        Potion potion = Instantiate(_potionPrefab, transform.position, Quaternion.identity).GetComponent<Potion>();
+        Potion potion = Instantiate(_potionPrefab, transform.position, Quaternion.identity, Links.potionsContainer).GetComponent<Potion>();
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         potion.targetPoint = mousePos;

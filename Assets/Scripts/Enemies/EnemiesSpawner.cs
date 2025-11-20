@@ -32,6 +32,8 @@ public class EnemiesSpawner : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(_spawnDelay);
+
             int randomRotation = Random.Range(0, 180);
 
             transform.Rotate(0, 0, randomRotation);
@@ -51,11 +53,10 @@ public class EnemiesSpawner : MonoBehaviour
 
             SpawnImmediate(index, _spawnPivot.position, transform.eulerAngles.z);
 
-            yield return new WaitForSeconds(_spawnDelay);
         }
     }
 
-    public void SpawnImmediate(int enemyIndex, Vector3 position, float zEuler, float hp = -1)
+    public GameObject SpawnImmediate(int enemyIndex, Vector3 position, float zEuler, float hp = -1)
     {
 
         Transform enemy = Instantiate(Enemies[enemyIndex], position, Quaternion.Euler(0, 0, zEuler), _enemiesContainer);
@@ -69,5 +70,7 @@ public class EnemiesSpawner : MonoBehaviour
         HPBar enemyBar = bar.GetComponent<HPBar>();
         enemyBar.checkingObject = enemy.GetComponent<Damageable>();
         enemyBar.Initialize();
+
+        return enemy.gameObject;
     }
 }

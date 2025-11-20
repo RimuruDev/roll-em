@@ -1,0 +1,49 @@
+{
+    "enemiesData": [
+        {
+            "position": {
+                "x": 0.6698868274688721,
+                "y": 0.08674011379480362,
+                "z": 0.0
+            },
+            "rotation": 90.01914978027344,
+            "hp": 2.3221728801727297,
+            "typeIndex": 0
+        },
+        {
+            "position": {
+                "x": -0.6691784262657166,
+                "y": 0.007989666424691677,
+                "z": 0.0
+            },
+            "rotation": 270.0000305175781,
+            "hp": 5.0,
+            "typeIndex": 0
+        }
+    ],
+    "coinsCount": 0,
+    "killsCount": 1,
+    "currentGameSpeed": 1.0570003986358643,
+    "towerHP": 96,
+    "trunkHP": 197,
+    "trunkRotation": 533.876708984375,
+    "trunkPosition": {
+        "x": -1.3963223695755005,
+        "y": 0.14981955289840699,
+        "z": 0.0
+    },
+    "trunkSpeed": 131.72079467773438,
+    "soundVolume": 0.25,
+    "showLearning": false,
+    "chargePercent": 1.0,
+    "potions": [],
+    "potionZones": [],
+    "UpgradeLevels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+}
