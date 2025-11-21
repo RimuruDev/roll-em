@@ -186,7 +186,8 @@ public class SaveLoadManager : MonoBehaviour
         PrepareUpgradesData();
 
         string json = JsonUtility.ToJson(_gameData, true);
-        File.WriteAllText(savePath, json);
+        string encryptedJson = Encryptor.EncryptToBase64(json, "reallysecretkeyphrase123456789");
+        File.WriteAllText(savePath, encryptedJson);
         Debug.Log("Игра сохранена в " + savePath);
     }
 
@@ -194,7 +195,8 @@ public class SaveLoadManager : MonoBehaviour
     public IEnumerator LoadGame()
     {
         //ready
-        string json = File.ReadAllText(savePath);
+        string encryptedJson = File.ReadAllText(savePath);
+        string json = Encryptor.DecryptFromBase64(encryptedJson, "reallysecretkeyphrase123456789");
         _gameData = JsonUtility.FromJson<SaveData>(json);
 
         //ready

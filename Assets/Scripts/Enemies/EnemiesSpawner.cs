@@ -11,7 +11,8 @@ public class EnemiesSpawner : MonoBehaviour
     [SerializeField] private Transform _spawnPivot;
     [SerializeField] private GameObject _hpBar;
     [SerializeField] private Transform _barsContainer;
-    [SerializeField] private float _spawnDelay = 5;
+    [SerializeField] private float[] SpawnDelays;
+    private float _spawnDelay;
 
     private int _totalWeights;
 
@@ -30,10 +31,9 @@ public class EnemiesSpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
+        yield return new WaitForSeconds(SpawnDelays[0]);
         while (true)
         {
-            yield return new WaitForSeconds(_spawnDelay);
-
             int randomRotation = Random.Range(0, 180);
 
             transform.Rotate(0, 0, randomRotation);
@@ -53,6 +53,9 @@ public class EnemiesSpawner : MonoBehaviour
 
             SpawnImmediate(index, _spawnPivot.position, transform.eulerAngles.z);
 
+            _spawnDelay = SpawnDelays[index];
+
+            yield return new WaitForSeconds(_spawnDelay);
         }
     }
 

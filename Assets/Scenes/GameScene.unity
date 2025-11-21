@@ -6389,12 +6389,14 @@ MonoBehaviour:
   Enemies:
   - {fileID: 7473301855650962615, guid: f6bb6532a7c6c224facd1f27b0e7c537, type: 3}
   - {fileID: 678132315180903743, guid: 40b54dcda78e8d74b964e939978ee36c, type: 3}
-  EnemiesWeights: 5a0000000a000000
+  EnemiesWeights: 550000000f000000
   _enemiesContainer: {fileID: 1038521710}
   _spawnPivot: {fileID: 1106889735}
   _hpBar: {fileID: 453656907633529357, guid: f450cdc43feba2e4fb797c54f356fc80, type: 3}
   _barsContainer: {fileID: 1095472038}
-  _spawnDelay: 5
+  SpawnDelays:
+  - 5
+  - 6.5
 --- !u!1001 &747067824
 PrefabInstance:
   m_ObjectHideFlags: 0
