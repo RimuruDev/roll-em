@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,10 +12,14 @@ public class LearningControlls : MonoBehaviour
 
     [SerializeField] private UnityEvent OnLearningEnded;
 
-    private int _hint = 0;
+    [SerializeField] private bool _mirrorFirstHint = true;
+
+    private int _hint;
 
     private void Awake()
     {
+        _hint = 0;
+        
         if (PlayerData.showLearning)
         {
             Links.gameManager.PauseTime();
@@ -35,6 +38,17 @@ public class LearningControlls : MonoBehaviour
         {
             _demoImage.sprite = Sprites[_hint];
             _hintText.text = Hints[_hint];
+
+            // NOTE: зеркалим только первый слайд, если включено
+            // Так как по умолчанию в обучении раскладка отрисована не корректно, сбивает с толку. 
+            // Возможно это конечно задумка автора. Но пох, это же форк, можно и пошалить.
+            var scale = _demoImage.rectTransform.localScale;
+            if (_hint == 0 && _mirrorFirstHint)
+                scale.x = -Mathf.Abs(scale.x);
+            else
+                scale.x = Mathf.Abs(scale.x);
+            _demoImage.rectTransform.localScale = scale;
+
             _hint++;
         }
         else
