@@ -40,6 +40,12 @@ public static class PlatformEntryPoint
     {
         AppLogWrapper.IsEnabled = true;
 
+        // NOTE: Отрублю в тупую все логи для сборки пофиг.
+#if !UNITY_EDITOR
+        AppLogWrapper.IsEnabled = false;
+        Debug.unityLogger.logEnabled = false;
+#endif
+        
 #if !RIM_DEF_WIN_API
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
 
