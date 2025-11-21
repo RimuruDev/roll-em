@@ -283,7 +283,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1208215311, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -358,7 +358,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -462206333, guid: 60de52780479a48479f891e57cc33a7a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -677,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -803,7 +811,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -341152472, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -880,7 +888,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 2303217794823328791, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -955,7 +963,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1196599040, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1114,7 +1122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1250,7 +1258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1401,7 +1409,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1662,6 +1670,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1746,7 +1758,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1813,7 +1825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1975,7 +1987,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2063,7 +2075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2320,6 +2332,10 @@ PrefabInstance:
     - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
       propertyPath: m_Color.r
       value: 0.38679248
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2942,6 +2958,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1817918479}
     m_Modifications:
+    - target: {fileID: 1460449382271947509, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1761535375595187630, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Name
       value: MaxHP
@@ -3001,6 +3021,10 @@ PrefabInstance:
     - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511659280670034481, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: _segmentsCount
@@ -3134,6 +3158,10 @@ PrefabInstance:
       propertyPath: '_floatUpgrade.LevelValues.Array.data[3]'
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6251143948707465150, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355033561136784568, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3258,6 +3286,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Tower MAX HP
       objectReference: {fileID: 0}
+    - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3339,7 +3371,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 1712364823, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3478,6 +3510,10 @@ PrefabInstance:
     - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
       propertyPath: m_Color.r
       value: 0.38679248
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3694,7 +3730,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3771,7 +3807,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 2018084878, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3979,6 +4015,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4096,6 +4136,10 @@ PrefabInstance:
     - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4450,6 +4494,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4586,6 +4634,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756537023}
     m_Modifications:
+    - target: {fileID: 1460449382271947509, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1761535375595187630, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Name
       value: Damage
@@ -4645,6 +4697,10 @@ PrefabInstance:
     - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511659280670034481, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: _segmentsCount
@@ -4778,6 +4834,10 @@ PrefabInstance:
       propertyPath: '_floatUpgrade.LevelValues.Array.data[3]'
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6251143948707465150, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355033561136784568, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4901,6 +4961,10 @@ PrefabInstance:
     - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_text
       value: Trunk DAMAGE MULTIPLIER
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5127,6 +5191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756537023}
     m_Modifications:
+    - target: {fileID: 1460449382271947509, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1761535375595187630, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Name
       value: MaxSpeed
@@ -5186,6 +5254,10 @@ PrefabInstance:
     - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511659280670034481, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: _segmentsCount
@@ -5319,6 +5391,10 @@ PrefabInstance:
       propertyPath: '_floatUpgrade.LevelValues.Array.data[3]'
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6251143948707465150, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355033561136784568, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5447,6 +5523,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5663,6 +5743,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5732,7 +5816,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 148994009, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5821,7 +5905,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5897,7 +5981,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2049388052, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5974,7 +6058,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -6053,7 +6137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6267,7 +6351,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -6512,6 +6596,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6573,7 +6661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6752,15 +6840,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
       propertyPath: m_Color.b
-      value: 0.4509804
+      value: 0.57254905
       objectReference: {fileID: 0}
     - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
       propertyPath: m_Color.g
-      value: 0.5254902
+      value: 0.7921569
       objectReference: {fileID: 0}
     - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
       propertyPath: m_Color.r
-      value: 0.65882355
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6932,7 +7024,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 2018084878, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7057,7 +7149,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7132,7 +7224,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1945205854, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7207,7 +7299,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 1712364823, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7297,7 +7389,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -202906838, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7383,7 +7475,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7516,7 +7608,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1718994536, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7623,7 +7715,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7768,7 +7860,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -7974,6 +8066,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8045,7 +8141,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1908840669, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8124,7 +8220,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8199,7 +8295,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -495317289, guid: d2cff0bab627940419088c79bd441694, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8274,7 +8370,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -195974763, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8453,7 +8549,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -978519355, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8607,6 +8703,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8736,7 +8836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8919,7 +9019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -9128,6 +9228,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9197,7 +9301,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1180543019, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9430,6 +9534,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9593,7 +9701,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9813,7 +9921,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9889,7 +9997,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1908840669, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -10029,6 +10137,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10157,7 +10269,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -10224,7 +10336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10362,7 +10474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10688,6 +10800,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.65882355
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10801,7 +10917,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 1317581711, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -10825,6 +10941,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756537023}
     m_Modifications:
+    - target: {fileID: 1460449382271947509, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1761535375595187630, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Name
       value: MaxHP
@@ -10884,6 +11004,10 @@ PrefabInstance:
     - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511659280670034481, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: _segmentsCount
@@ -11021,6 +11145,10 @@ PrefabInstance:
       propertyPath: '_floatUpgrade.LevelValues.Array.data[3]'
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6251143948707465150, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355033561136784568, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11144,6 +11272,10 @@ PrefabInstance:
     - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_text
       value: Trunk MAX HP
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11285,7 +11417,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -11418,7 +11550,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -11485,7 +11617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11675,7 +11807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11889,7 +12021,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12034,7 +12166,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12214,7 +12346,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -341152472, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12359,7 +12491,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12493,7 +12625,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1006401427, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12592,7 +12724,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1945205854, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12700,7 +12832,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -2638538065173654039, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -12845,7 +12977,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -341152472, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -13082,6 +13214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1458769831}
     m_Modifications:
+    - target: {fileID: 1460449382271947509, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1761535375595187630, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Name
       value: UsageCost
@@ -13141,6 +13277,10 @@ PrefabInstance:
     - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511659280670034481, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: _segmentsCount
@@ -13274,6 +13414,10 @@ PrefabInstance:
       propertyPath: '_floatUpgrade.LevelValues.Array.data[3]'
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6251143948707465150, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355033561136784568, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13398,6 +13542,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Potion USAGE COST
       objectReference: {fileID: 0}
+    - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -13486,7 +13634,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 2143884167, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -13676,7 +13824,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 1819540353, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -13889,7 +14037,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 1712364823, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -13966,7 +14114,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 2303217794823328791, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -14298,7 +14446,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -786609655, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -14467,6 +14615,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.65882355
       objectReference: {fileID: 0}
+    - target: {fileID: 7040606553634691316, guid: c8ebe823a0f67ae42b6c2ad7cb3052cd, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14529,7 +14681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14717,7 +14869,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -14784,7 +14936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14932,7 +15084,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1945205854, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -15117,7 +15269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15261,7 +15413,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 148994009, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -20127,6 +20279,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1458769831}
     m_Modifications:
+    - target: {fileID: 1460449382271947509, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1761535375595187630, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Name
       value: RechargeTime
@@ -20186,6 +20342,10 @@ PrefabInstance:
     - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_Color.r
       value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528236401960929362, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5511659280670034481, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: _segmentsCount
@@ -20323,6 +20483,10 @@ PrefabInstance:
       propertyPath: '_floatUpgrade.LevelValues.Array.data[3]'
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 6251143948707465150, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6355033561136784568, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -20446,6 +20610,10 @@ PrefabInstance:
     - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
       propertyPath: m_text
       value: Potion RECHARGE TIME
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278439297919710776, guid: cf9b3e37678904644b9d9697db677571, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20731,7 +20899,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1275873232, guid: d2cff0bab627940419088c79bd441694, type: 3}
   m_Type: 3
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -20994,7 +21162,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -978519355, guid: 8bd6788783b3a194a814f3d2f30f2300, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
