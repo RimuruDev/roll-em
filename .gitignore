@@ -6,12 +6,12 @@
 [Ll]ibrary/
 [Tt]emp/
 /[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
+#[Bb]uild/
+#[Bb]uilds/
 [Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
-_builds
+#_builds
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -79,3 +79,4 @@ Assets/Resources/PerformanceTestRunInfo.json
 Assets/Resources/PerformanceTestRunSettings.json
 Assets/Resources/PerformanceTestRunSettings.json.meta
 Assets/Resources/PerformanceTestRunInfo.json.meta
+/Builds
