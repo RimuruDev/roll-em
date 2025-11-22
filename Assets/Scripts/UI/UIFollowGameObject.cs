@@ -1,44 +1,60 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIFollowGameObject : MonoBehaviour
 {
     public Transform targetObject { set => _targetObject = value; }
     public float offset { set => _offset = value; }
 
-
-    private Transform _targetObject; // GameObject за которым нужно следовать
-    private float _offset;         // Смещение UI элемента относительно GameObject (необязательно)
+    private Transform _targetObject;
+    private float _offset;
 
     private RectTransform _rectTransform;
-    private CanvasScaler _canvasScaler;
     private Canvas _canvas;
+    private Camera _camera;
 
-    void Start()
+    private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
         _canvas = GetComponentInParent<Canvas>();
-        _canvasScaler = _canvas.GetComponent<CanvasScaler>();
+        _camera = Camera.main;
     }
 
-    void Update()
+    private void LateUpdate()
     {
-        if (_targetObject != null)
-        {
-            // Преобразуем позицию игрового объекта из мирового пространства в пространство экрана
-            Vector2 viewportPosition = Camera.main.WorldToViewportPoint(_targetObject.position + Vector3.up * _offset);
-
-            // Преобразуем позицию viewport в позицию внутри Canvas
-            Vector2 anchoredPosition = new Vector2(
-                ((viewportPosition.x * _canvasScaler.referenceResolution.x) - (_canvasScaler.referenceResolution.x * 0.5f)),
-                ((viewportPosition.y * _canvasScaler.referenceResolution.y) - (_canvasScaler.referenceResolution.y * 0.5f))
-            );
-
-            _rectTransform.anchoredPosition = anchoredPosition;
-        }
-        else
+        if (_targetObject == null)
         {
             Destroy(gameObject);
+            return;
         }
+
+        if (_rectTransform == null)
+            _rectTransform = GetComponent<RectTransform>();
+
+        if (_canvas == null)
+            _canvas = GetComponentInParent<Canvas>();
+
+        if (_camera == null)
+            _camera = Camera.main;
+
+        if (_canvas == null || _camera == null)
+            return;
+
+        RectTransform canvasRect = _canvas.transform as RectTransform;
+        if (canvasRect == null)
+            return;
+
+        Vector3 worldPosition = _targetObject.position + Vector3.up * _offset;
+
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(_camera, worldPosition);
+
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRect,
+            screenPoint,
+            _canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : _camera,
+            out localPoint
+        );
+
+        _rectTransform.anchoredPosition = localPoint;
     }
 }
