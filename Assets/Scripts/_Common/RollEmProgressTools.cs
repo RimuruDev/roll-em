@@ -1,12 +1,16 @@
-#if UNITY_EDITOR
 using System.IO;
-using UnityEditor;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public static class RollEmProgressTools
 {
+#if UNITY_EDITOR
     [MenuItem("Tools/Roll'em/Clear Progress")]
-    private static void ClearProgress()
+#endif
+    public static void ClearProgress()
     {
         var saveDirectory = Application.persistentDataPath + "/saves";
         var saveFile = saveDirectory + "/save.json";
@@ -23,4 +27,3 @@ public static class RollEmProgressTools
         AppLogWrapper.Send("<color=yellow>Roll'em progress cleared!</color>");
     }
 }
-#endif

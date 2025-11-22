@@ -2,6 +2,8 @@
 #define RIM_DEF_WIN_API
 #endif
 
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Scripting;
 using UnityEngine.SceneManagement;
@@ -24,6 +26,42 @@ public static class AppLogWrapper
             return;
 
         Debug.Log($"{message}", ctx);
+    }
+}
+
+[Preserve]
+public static class DontDestroyOnLoadRepository
+{
+    private static readonly HashSet<GameObject> Collection = new();
+
+    public static void Register(GameObject go)
+    {
+        if (go == null)
+            return;
+
+        if (!Collection.Contains(go))
+            Collection.Add(go);
+    }
+
+    public static void UnRegister(GameObject go)
+    {
+        if (go == null)
+            return;
+
+        Collection.Remove(go);
+    }
+
+    public static void DisposeAndDestroy()
+    {
+        foreach (GameObject go in Collection.ToArray())
+        {
+            if (go != null)
+                Object.Destroy(obj: go, t: 0);
+        }
+
+        Collection.Clear();
+        
+        AppLogWrapper.Send(nameof(DisposeAndDestroy));
     }
 }
 
@@ -106,7 +144,9 @@ public static class PlatformEntryPoint
 
         var go = new GameObject("__PlatformBackgroundCamera");
         _backgroundCamera = go.AddComponent<Camera>();
+        
         Object.DontDestroyOnLoad(go);
+        DontDestroyOnLoadRepository.Register(go);
 
         _backgroundCamera.clearFlags = CameraClearFlags.SolidColor;
         _backgroundCamera.backgroundColor = Color.black;

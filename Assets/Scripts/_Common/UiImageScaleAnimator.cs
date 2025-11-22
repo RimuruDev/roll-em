@@ -56,8 +56,11 @@ public sealed class UiImageScaleAnimator : MonoBehaviour
         if (_routine != null)
             StopCoroutine(_routine);
 
+        _baseScale = _target.localScale;
+
         _routine = StartCoroutine(PlayRoutine());
     }
+
 
     private IEnumerator PlayRoutine()
     {
